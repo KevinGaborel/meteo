@@ -1,0 +1,14 @@
+#btn-geolocalisation {
+    height: 2rem;
+    width: 2rem;
+    background-color: #6E707A;
+    background-image: url("../../images/GPS.png");
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin: 1rem 1rem 0 0;
+}
+

@@ -1,0 +1,103 @@
+.Actual_weather_container {
+    background-color: #1E213A;
+    padding-bottom: 3rem;
+}
+.Header {
+    display: flex;
+    justify-content: space-between;
+}
+.Future_weather_container{
+    background-color: #100E1D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#infos-today-cards{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.infos-today{
+    width: 80%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+    border-radius: 10px;
+    background-color: #1E213A;
+}
+
+/* la partie recherche */
+.search_container{
+    background-color: #1E213A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#search-form{
+    width: 100%;
+}
+#return-home{
+    align-self: flex-end;
+    margin: 0.5rem 0.5rem 0 0;
+    height: 1rem;
+    background-image: url('../../images/croix2.png');
+    background-color: #1E213A;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    outline: none;
+    border: none;
+}
+#search-section{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#search-bar, #loupe{
+    border-color: white;
+    border-style: solid;
+    background-color: #1E213A;
+    padding: 0.5rem 0 0.5rem 0;
+}
+#loupe{
+    background-position: center;
+    background-image: url("../../images/loupe.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    border-width: 1px 0 1px 1px;
+    width: 10%;
+}
+#search-bar{
+    border-width: 1px 1px 1px 0;
+    outline: none;
+}
+#search-section button{
+    margin-left: 0.5rem;
+    background-color: #3C47E9;
+    outline: none;
+    border: none;
+    font-size: 0.8rem;
+}
+
+#list-cities{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 0;
+}
+#list-cities a{
+    padding: 1rem;
+    margin: 0.5rem 0;
+    text-decoration: none;
+    width: 80%;
+    border: white solid 1px;
+    align-self: center;
+}
+.li-city{
+    width: 100%;
+}

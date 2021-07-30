@@ -1,0 +1,73 @@
+*{
+    color: white;
+    font-weight: bolder;
+}
+
+#time{
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.container-img-condition{
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-position-x: 10rem;
+    background-position-y: center;
+    background-size: 50%;
+    background-repeat: repeat-x;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: mooveBackground;
+}
+#sunny{
+    background-image: url("../../images/Clear.png");
+}
+#light-rain{
+    background-image: url("../../images/Shower.png");
+}
+#rain{
+    background-image: url("../../images/LightRain.png");
+}
+#heavy-cloud{
+    background-image: url("../../images/HeavyCloud.png");
+}
+#light-cloud{
+    background-image: url("../../images/LightCloud.png");
+}
+@keyframes mooveBackground {
+    from {
+        background-position-x: 0%;
+    }
+  
+    to {
+        background-position-x: 100%;
+    }
+  }
+
+.Weather_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Weather_container img{
+    width: 30vw;
+}
+.Weather_container #temperature{
+    margin: 1rem 0;
+    font-size: 2.5rem;
+}
+.Weather_container #condition{
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+.Weather_container .infos-location{
+    margin: 0.2rem 0;
+}
+.Weather_container .infos{
+    margin: 0.5rem 0;
+}
