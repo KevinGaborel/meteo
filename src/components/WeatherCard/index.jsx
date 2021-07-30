@@ -5,14 +5,7 @@ function WeatherCard({data, name}) {
     var ladate= new Date()
     var tab_jour= ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
 
-    console.log(ladate);
-    console.log(ladate.getDay());
-    console.log(tab_jour[ladate.getDay()]);
-    console.log(name);
-
     let dayIndex = ladate.getDay() + 1 + name;
-
-    console.log(dayIndex);
 
     if (dayIndex > 6){
         dayIndex = dayIndex - 7;

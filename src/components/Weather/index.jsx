@@ -36,6 +36,9 @@ function Weather({country, city, region, localTime, temperature, condition}) {
         case "Partiellement nuageux":
             idCondition = "light-cloud";
             break;
+        default:
+            idCondition = "sunny";
+            break;
     }
 
     return (
