@@ -31,12 +31,51 @@
 }
 
 /* la partie recherche */
-.search_container{
+#search_container{
     background-color: #1E213A;
-    display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    position: absolute;
+    height: 200vh;
+    top: 0;
+    left: 0;
 }
+.close-search{
+    animation-name: pageAccueil;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    z-index: 2;
+}
+.noSearch{
+    display: none;
+}
+@keyframes pageAccueil{
+    0%{  
+        display: flex;
+        transform: translateX(0%);
+    }
+    100%{
+        display: flex;
+        transform: translateX(-100%);
+    }
+}
+.research{
+    display: flex;
+    animation-name: pageSearch;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    z-index: 2;
+}
+@keyframes pageSearch{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
 #search-form{
     width: 100%;
 }
@@ -81,6 +120,9 @@
     outline: none;
     border: none;
     font-size: 0.8rem;
+}
+#search-section button:hover{
+    cursor: pointer;
 }
 
 #list-cities{

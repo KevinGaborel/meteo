@@ -91,16 +91,24 @@ const Home = () => {
     setCities(result);
   }
 
+  function animateResearchPage(string){
+    if (string === 'close-search'){
+      setTimeout(() => animateResearchPage('noSearch'), 1000);
+      console.log(string);
+      setHomePage(string);
+    } else {
+      setHomePage(string);
+      console.log(string);
+    }
+  }
 
   return (
-
-    ((homePage === "noSearch") ? 
     
     <React.Fragment>
       <div className= "Actual_weather_container">
         <div className= "Header">
           <Search> 
-            <button id="btn-search" onClick={() => setHomePage("search")} >Rechercher une ville</button>
+            <button id="btn-search" onClick={() => animateResearchPage('research') } >Rechercher une ville</button>
           </Search>
           <Geolocalisation>
             <button id="btn-geolocalisation" onClick={geolocation} ></button>
@@ -119,35 +127,31 @@ const Home = () => {
           <div className= "infos-today">
           <h3>Force du vent</h3>
           <div>{`${cityWeather.gust_kph}  Km/H`}</div>
-          </div>
-          <div className= "infos-today">
+        </div>
+        <div className= "infos-today">
           <h3>hygrométrie</h3>
           <div>{`${cityWeather.humidity} %`}</div>
           <progress id="file" max="100" value={cityWeather.humidity}> </progress>
-          </div>
         </div>
-
+        </div>
+    
       </div>
-  </React.Fragment> 
-  
-  :
-  
-  <div className= "search_container">
-    <button id="return-home"></button>
-    <form id="search-form">
-      <span id="search-section">
-        <div id="loupe"></div>
-        <input type="search" name="search" id="search-bar" onChange={(event) => getSearch(event.target.value)} placeholder="Rechercher une ville" />
-        <button type="submit" >Search</button>
-      </span>
-    </form>
 
-    <ul id="list-cities" >
-      {cities.map((city, index) => <a href={`/${city}`} key={city + index} ><li className="li-city"  >{city}</li></a>)}
-    </ul>
-  </div>
-  
-  )
+      <div className={homePage} id="search_container" >
+        <button id="return-home" onClick={() => animateResearchPage('close-search')} ></button>
+        <form id="search-form">
+          <span id="search-section">
+            <div id="loupe"></div>
+            <input type="search" name="search" id="search-bar" onChange={(event) => getSearch(event.target.value)} placeholder="Rechercher une ville" />
+            <button type="submit" >Search</button>
+          </span>
+        </form>
+        <ul id="list-cities" >
+          {cities.map((city, index) => <a href={`/${city}`} key={city + index} ><li className="li-city"  >{city}</li></a>)}
+        </ul>
+      </div>
+
+    </React.Fragment>
   )  
 
 }
