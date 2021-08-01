@@ -16,7 +16,7 @@ function WeatherCard({data, name}) {
             <div className= "card">
                 <div>{tab_jour[dayIndex]}</div>
                 <img src={data.day.condition.icon} alt={data.day.condition.text} />
-                <p>{`${data.day.avgtemp_c}C°`} <span className="max-temp" >{`${data.day.maxtemp_c}C°`}</span> </p>
+                <p className="card-temp" >{`${data.day.avgtemp_c}C°`} <span className="max-temp" >{`${data.day.maxtemp_c}C°`}</span> </p>
             </div>
           
         </ React.Fragment>

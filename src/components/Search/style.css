@@ -7,3 +7,9 @@
     border: none;
     margin: 1rem 0 0 1rem;
 }
+
+@media only screen and (min-width: 500px){
+    #btn-search{
+        font-size: 1.3rem;
+    }
+}

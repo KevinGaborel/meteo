@@ -12,3 +12,15 @@
     margin: 1rem 1rem 0 0;
 }
 
+@media only screen and (min-width: 500px){
+    #btn-geolocalisation{
+        height: 3rem;
+        width: 3rem;
+    }
+}
+
+@media only screen and (max-width: 649px){
+    #btn-geolocalisation{
+        margin: 1rem 0;
+    }
+}

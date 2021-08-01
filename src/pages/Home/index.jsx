@@ -106,18 +106,19 @@ const Home = () => {
     
     <React.Fragment>
       <div className= "Actual_weather_container">
-        <div className= "Header">
+        <header>
           <Search> 
             <button id="btn-search" onClick={() => animateResearchPage('research') } >Rechercher une ville</button>
           </Search>
           <Geolocalisation>
             <button id="btn-geolocalisation" onClick={geolocation} ></button>
           </Geolocalisation>
-        </div>
+        </header>
           <Weather country={cityLocation.country} city={cityLocation.name} region={cityLocation.region} localTime={cityLocation.localtime} 
             condition={cityWeather.condition} temperature={cityWeather.temp_c}
           />
       </div>
+
       <div className= "Future_weather_container">
         <div id="cards-container">
           {forecast.map((card, index) => <WeatherCard key={card.date + index} data={card} name={index} />)}
@@ -125,16 +126,15 @@ const Home = () => {
         <div id="infos-today-cards">
           <h2>Aujourd'hui</h2>
           <div className= "infos-today">
-          <h3>Force du vent</h3>
-          <div>{`${cityWeather.gust_kph}  Km/H`}</div>
+            <h3>Force du vent</h3>
+            <div>{`${cityWeather.gust_kph}  Km/H`}</div>
+          </div>
+          <div className= "infos-today">
+            <h3>Hygrométrie</h3>
+            <div>{`${cityWeather.humidity} %`}</div>
+            <progress id="file" max="100" value={cityWeather.humidity}> </progress>
+          </div>
         </div>
-        <div className= "infos-today">
-          <h3>hygrométrie</h3>
-          <div>{`${cityWeather.humidity} %`}</div>
-          <progress id="file" max="100" value={cityWeather.humidity}> </progress>
-        </div>
-        </div>
-    
       </div>
 
       <div className={homePage} id="search_container" >
