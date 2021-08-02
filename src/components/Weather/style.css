@@ -19,7 +19,7 @@
     background-position-x: 0;
     background-position-y: center;
     background-size: 50%;
-    background-repeat: repeat-x;
+    background-repeat: no-repeat;
 
     animation-duration: 15s;
     animation-iteration-count: infinite;
@@ -43,7 +43,7 @@
 }
 @keyframes mooveBackground {
     from {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
   
     to {
@@ -104,3 +104,4 @@
         font-size: 1.3rem;
     }
 }
+

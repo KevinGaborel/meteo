@@ -5,11 +5,17 @@
     background-color: #6E707A;
     outline: none;
     border: none;
-    margin: 1rem 0 0 1rem;
+    margin: 1rem 0 0 0;
 }
 
 @media only screen and (min-width: 500px){
     #btn-search{
         font-size: 1.3rem;
+    }
+}
+
+@media only screen and (min-width: 649px){
+    #btn-search{
+        margin: 1rem 0 0 1rem;
     }
 }
