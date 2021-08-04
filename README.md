@@ -11,16 +11,15 @@ Pour réalisé ce projet, j'ai utilisé l'api météo "weatherapi".
 
 ## Pour tester
 
-N'hésitez pas à tester ce projet, et à me faire un retour.
+Directement ici: https://meteo-kevin-gaborel.surge.sh/
 
+N'hésitez pas à tester ce projet, et à me faire un retour.
 
 Pour tester le projet après l'avoir cloné, depuis le terminal faite:
 
 
-npm i (pour installer les dépendances)
-
-
-npm start (pour lancer le projet)
+- npm i (pour installer les dépendances)
+- npm start (pour lancer le projet)
 
 
 
