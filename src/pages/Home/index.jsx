@@ -14,11 +14,10 @@ const Home = () => {
   const [cityLocation, setCityLocation] = useState({});
   const [weatherForecast, setweatherForecast] = useState([]);
   const [cities, setCities] = useState([]);
-
-  const windowUrl = window.location.pathname.slice(1, );
   
   let params = (new URL(document.location)).searchParams;
-  let name = params.get('search');
+  let queryString = params.get('search');
+
 
   const getDataFromApi = (lat, long) => {
     const url = `https://api.weatherapi.com/v1/forecast.json?key=56e420e8280d4f05a3593154212107&q=${lat},${long}&days=3&lang=fr&aqi=no`;
@@ -62,11 +61,8 @@ const Home = () => {
     }
     
     useEffect(() => {
-      if (name){
-        getSearchApi(name);
-      }
-      else if (windowUrl){
-        getSearchApi(windowUrl);
+      if (queryString){
+        getSearchApi(queryString);
       } else {
         geolocation();
       }
@@ -147,7 +143,7 @@ const Home = () => {
           </span>
         </form>
         <ul id="list-cities" >
-          {cities.map((city, index) => <a href={`/${city}`} key={city + index} ><li className="li-city"  >{city}</li></a>)}
+          {cities.map((city, index) => <a href={`/?search=${city}`} key={city + index} ><li className="li-city"  >{city}</li></a>)}
         </ul>
       </div>
 
