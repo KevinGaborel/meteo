@@ -1,0 +1,37 @@
+#forecast_container > h2{
+    text-align: center;
+}
+#btn-day-forecast-container{
+    display: flex;
+    justify-content: space-around;
+}
+#btn-day-forecast-container button{
+    background-color: #100E1D;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.3rem 0.4rem;
+}
+
+#forecast-list{
+    display: flex;
+    margin: 1rem;
+    padding: 0;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+}
+
+
+#forecast-list li{
+    background-color: #100E1D;
+    margin-right: 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 10rem;
+    scroll-snap-align: start;
+}

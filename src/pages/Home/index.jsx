@@ -5,6 +5,7 @@ import Geolocalisation from '../../components/Geolocalisation'
 import Weather from '../../components/Weather'
 import WeatherCard from '../../components/WeatherCard'
 import axios from 'axios';
+import ForecastHours from '../../components/ForecastHours';
 
 
 const Home = () => {
@@ -77,11 +78,7 @@ const Home = () => {
    ]
 
   function getSearch(value){
-    const result = tabCity.filter((search) => {
-      if (search.toLocaleLowerCase().slice(0, value.length) === value.toLocaleLowerCase()){
-        return search;
-      }
-    });
+    const result = tabCity.filter((search) => search.toLocaleLowerCase().slice(0, value.length) === value.toLocaleLowerCase() && search);
     // je limite le nombre de résultats à 10
     result.length = 10;
     setCities(result);
@@ -90,11 +87,9 @@ const Home = () => {
   function animateResearchPage(string){
     if (string === 'close-search'){
       setTimeout(() => animateResearchPage('noSearch'), 1000);
-      console.log(string);
       setHomePage(string);
     } else {
       setHomePage(string);
-      console.log(string);
     }
   }
 
@@ -113,7 +108,11 @@ const Home = () => {
           <Weather country={cityLocation.country} city={cityLocation.name} region={cityLocation.region} localTime={cityLocation.localtime} 
             condition={cityWeather.condition} temperature={cityWeather.temp_c}
           />
+        <div id="forecast_container">
+          <ForecastHours forecast={weatherForecast.map(weatherHour => weatherHour.hour)} />
+        </div>
       </div>
+
 
       <div className= "Future_weather_container">
         <div id="cards-container">

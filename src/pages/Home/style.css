@@ -144,15 +144,23 @@ header {
 .li-city{
     width: 100%;
 }
+/* la partie forecast de home */
+#forecast_container{
+    margin-top: 2rem;
+    overflow-x: hidden;
+    width: 100%;
+}
 
 /* media queries */
 
 @media only screen and (min-width: 500px){
     .Actual_weather_container {
         width: 100%;
+        overflow: hidden;
     }
     .Future_weather_container{
         width: 100%;
+        justify-content: center;
     }
 
     #search_container{

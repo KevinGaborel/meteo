@@ -2,8 +2,8 @@ import React from 'react'
 import './style.css'
 
 function WeatherCard({data, name}) {
-    var ladate= new Date()
-    var tab_jour= ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+    const ladate= new Date();
+    const tab_jour= ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
 
     let dayIndex = ladate.getDay() + 1 + name;
 
