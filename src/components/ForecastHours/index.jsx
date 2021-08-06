@@ -23,9 +23,9 @@ function ForecastHours({forecast}) {
             <h2>Prévisions par heures</h2>
             
             <div id='btn-day-forecast-container'>
-                <button onClick={() => setDaySelected(0)} >Aujourd'hui</button>
-                <button onClick={() => setDaySelected(1)}>Demain</button>
-                <button onClick={() => setDaySelected(2)}>{tab_jour[dayIndex]}</button>
+                <button onClick={() => setDaySelected(0)} className="btn-forecast" id={daySelected === 0 && "btn-forecast_selected"} >Aujourd'hui</button>
+                <button onClick={() => setDaySelected(1)} className="btn-forecast" id={daySelected === 1 && "btn-forecast_selected"} >Demain</button>
+                <button onClick={() => setDaySelected(2)} className="btn-forecast" id={daySelected === 2 && "btn-forecast_selected"} >{tab_jour[dayIndex]}</button>
             </div>
             <ul id="forecast-list">
                 {forecast.length > 0 && daySelected === 0 ? forecast[daySelected].map((forecastHour, index) => index >= dateNow.getHours() &&

@@ -5,13 +5,17 @@
     display: flex;
     justify-content: space-around;
 }
-#btn-day-forecast-container button{
+.btn-forecast{
     background-color: #100E1D;
     border: none;
     border-radius: 5px;
     outline: none;
     font-size: 1rem;
     padding: 0.3rem 0.4rem;
+}
+#btn-forecast_selected{
+    background-color: white;
+    color: #100E1D;
 }
 
 #forecast-list{
