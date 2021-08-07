@@ -41,6 +41,9 @@
 #light-cloud{
     background-image: url("../../images/LightCloud.png");
 }
+#light-storm{
+    background-image: url('../../images/Thunderstorm.png');
+}
 @keyframes mooveBackground {
     from {
         transform: translateX(-50%);

@@ -154,6 +154,9 @@ header {
 /* media queries */
 
 @media only screen and (min-width: 500px){
+    #container{
+        display: flex;
+    }
     .Actual_weather_container {
         width: 100%;
         overflow: hidden;
@@ -179,6 +182,11 @@ header {
     }
     .infos-today div{
         font-size: 1.2rem;
+    }
+
+    #forecast_container{
+        margin-top: 0;
+        background-color: #2f3244;
     }
 }
 

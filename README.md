@@ -20,16 +20,3 @@ Pour tester le projet après l'avoir cloné, depuis le terminal faite:
 
 - npm i (pour installer les dépendances)
 - npm start (pour lancer le projet)
-
-
-
-## Le rendu :
-
-### Version mobile :
-<img src="./screens/phone.png" alt="drawing" width="33%"/>
-<img src="./screens/phone2.png" alt="drawing" width="33%"/>
-<img src="./screens/search_phone.png" alt="drawing" width="33%"/>
-
-### Version desktop :
-<img src="./screens/desktop.png" alt="drawing" width="100%"/>
-<img src="./screens/search_desktop.png" alt="drawing" width="100%"/>

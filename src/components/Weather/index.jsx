@@ -27,6 +27,9 @@ function Weather({country, city, region, localTime, temperature, condition}) {
         case "Pluie éparse à proximité":
             idCondition = "light-rain";
             break;
+        case "Pluie légère":
+            idCondition = "light-rain";
+            break;
         case "Pluie modérée":
             idCondition = "rain";
             break;
@@ -35,6 +38,9 @@ function Weather({country, city, region, localTime, temperature, condition}) {
             break;
         case "Partiellement nuageux":
             idCondition = "light-cloud";
+            break;
+        case "Foyers orageux à proximité":
+            idCondition = "light-storm";
             break;
         default:
             idCondition = "sunny";

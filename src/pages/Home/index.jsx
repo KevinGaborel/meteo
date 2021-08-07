@@ -93,44 +93,56 @@ const Home = () => {
     }
   }
 
+  const isDesktop = window.matchMedia("only screen and (min-width: 500px)").matches;
+
   return (
     
     <React.Fragment>
-      <div className= "Actual_weather_container">
-        <header>
-          <Search> 
-            <button id="btn-search" onClick={() => animateResearchPage('research') } >Rechercher une ville</button>
-          </Search>
-          <Geolocalisation>
-            <button id="btn-geolocalisation" onClick={geolocation} ></button>
-          </Geolocalisation>
-        </header>
-          <Weather country={cityLocation.country} city={cityLocation.name} region={cityLocation.region} localTime={cityLocation.localtime} 
-            condition={cityWeather.condition} temperature={cityWeather.temp_c}
-          />
-        <div id="forecast_container">
-          <ForecastHours forecast={weatherForecast.map(weatherHour => weatherHour.hour)} />
+      <div id="container">
+        <div className= "Actual_weather_container">
+          <header>
+            <Search> 
+              <button id="btn-search" onClick={() => animateResearchPage('research') } >Rechercher une ville</button>
+            </Search>
+            <Geolocalisation>
+              <button id="btn-geolocalisation" onClick={geolocation} ></button>
+            </Geolocalisation>
+          </header>
+            <Weather country={cityLocation.country} city={cityLocation.name} region={cityLocation.region} localTime={cityLocation.localtime} 
+              condition={cityWeather.condition} temperature={cityWeather.temp_c}
+            />
+  
+          {isDesktop === false && 
+          <div id="forecast_container">
+            <ForecastHours forecast={weatherForecast.map(weatherHour => weatherHour.hour)} />
+          </div>}
+  
+        </div>
+  
+  
+        <div className= "Future_weather_container">
+          <div id="cards-container">
+            {forecast.map((card, index) => <WeatherCard key={card.date + index} data={card} name={index} />)}
+          </div>
+          <div id="infos-today-cards">
+            <h2>Aujourd'hui</h2>
+            <div className= "infos-today">
+              <h3>Force du vent</h3>
+              <div>{`${cityWeather.gust_kph}  Km/H`}</div>
+            </div>
+            <div className= "infos-today">
+              <h3>Hygrométrie</h3>
+              <div>{`${cityWeather.humidity} %`}</div>
+              <progress id="file" max="100" value={cityWeather.humidity}> </progress>
+            </div>
+          </div>
         </div>
       </div>
 
-
-      <div className= "Future_weather_container">
-        <div id="cards-container">
-          {forecast.map((card, index) => <WeatherCard key={card.date + index} data={card} name={index} />)}
-        </div>
-        <div id="infos-today-cards">
-          <h2>Aujourd'hui</h2>
-          <div className= "infos-today">
-            <h3>Force du vent</h3>
-            <div>{`${cityWeather.gust_kph}  Km/H`}</div>
-          </div>
-          <div className= "infos-today">
-            <h3>Hygrométrie</h3>
-            <div>{`${cityWeather.humidity} %`}</div>
-            <progress id="file" max="100" value={cityWeather.humidity}> </progress>
-          </div>
-        </div>
-      </div>
+      {isDesktop && 
+      <div id="forecast_container">
+        <ForecastHours forecast={weatherForecast.map(weatherHour => weatherHour.hour)} />
+      </div>}
 
       <div className={homePage} id="search_container" >
         <button id="return-home" onClick={() => animateResearchPage('close-search')} ></button>
