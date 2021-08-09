@@ -14,9 +14,6 @@ function ForecastHours({forecast}) {
         dayIndex = dayIndex - 7;
     }
 
-    //const element = document.getElementById('forecast-list');
-    //element !== null && element.scrollIntoView({behavior: "instant", block: "start", inline: "start"});
-    //element !== null && console.log('yo');
 
     return (
         <React.Fragment >
