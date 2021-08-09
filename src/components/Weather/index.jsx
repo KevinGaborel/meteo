@@ -17,35 +17,30 @@ function Weather({country, city, region, localTime, temperature, condition}) {
    
     let idCondition;
 
-    switch(tabCondition[0]){
-        case "Ensoleillé":
-            idCondition = "sunny";
-            break;
-        case "Averse de pluie légère":
-            idCondition = "light-rain";
-            break;
-        case "Pluie éparse à proximité":
-            idCondition = "light-rain";
-            break;
-        case "Pluie légère":
-            idCondition = "light-rain";
-            break;
-        case "Pluie modérée":
-            idCondition = "rain";
-            break;
-        case "Couvert":
-            idCondition = "heavy-cloud";
-            break;
-        case "Partiellement nuageux":
-            idCondition = "light-cloud";
-            break;
-        case "Foyers orageux à proximité":
-            idCondition = "light-storm";
-            break;
-        default:
-            idCondition = "sunny";
-            break;
+    if(tabCondition[2] === 1000){
+        idCondition = "sunny";
+    }else if ((tabCondition[2] === 1003) || (tabCondition[2] === 1150) || (tabCondition[2] === 1153)){
+        idCondition = "light-cloud";
+    }else if ((tabCondition[2] === 1006) || (tabCondition[2] === 1009) || (tabCondition[2] === 1030) || (tabCondition[2] === 1135) || (tabCondition[2] === 1168)){
+        idCondition = "heavy-cloud";
+    }else if ((tabCondition[2] === 1063) || (tabCondition[2] === 1240) || (tabCondition[2] === 1243)){
+        idCondition = "light-rain";
+    }else if ((tabCondition[2] === 1180) || (tabCondition[2] === 1183) || (tabCondition[2] === 1186)){
+        idCondition = "rain";
+    }else if ((tabCondition[2] === 1189) || (tabCondition[2] === 1192) || (tabCondition[2] === 1195) || (tabCondition[2] === 1246)){
+        idCondition = "heavy-rain";
+    }else if ((tabCondition[2] === 1066) || (tabCondition[2] === 1069) || (tabCondition[2] === 1072) || (tabCondition[2] === 1114) 
+    || (tabCondition[2] === 1198) || (tabCondition[2] === 1204) || (tabCondition[2] === 1210) || (tabCondition[2] === 1213) || (tabCondition[2] === 1216) ||
+    (tabCondition[2] === 1219) || (tabCondition[2] === 1249) || (tabCondition[2] === 1255) || (tabCondition[2] === 1261)){
+        idCondition = "light-snow";
+    }else if ((tabCondition[2] === 1117) || (tabCondition[2] === 1147) || (tabCondition[2] === 1171) || (tabCondition[2] === 1201) || (tabCondition[2] === 1207)
+    || (tabCondition[2] === 1222) || (tabCondition[2] === 1225) || (tabCondition[2] === 1237) || (tabCondition[2] === 1252) || (tabCondition[2] === 1258) ||
+    (tabCondition[2] === 1264)){
+        idCondition = "heavy-snow";
+    }else if((tabCondition[2] === 1087) || (tabCondition[2] === 1273) || (tabCondition[2] === 1276) || (tabCondition[2] === 1279) || (tabCondition[2] === 1282)){
+        idCondition = "light-storm";
     }
+     
 
     return (
         <div className= "Weather_container">

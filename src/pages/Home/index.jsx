@@ -74,7 +74,8 @@ const Home = () => {
    const tabCity = [
      "Paris", "Dieppe", "Lille", "Nancy", "Nice", "Marseille", "Agen", "Argenteuil", "Brest", "Lyon", "Toulouse", "Nantes", "Montpellier", "Strasbourg",
      "Bordeaux", "Rennes", "Reims", "Saint-Etienne", "Le Havre", "Toulon", "Grenoble", "Dijon", "Angers", "Nîmes", "Villeurbanne", "Saint Denis", 
-     "Aix en Provence", "Le Mans", "Clermont Ferrand", "Tours", "Amiens", "Limoges", "Annecy", "Perpignan"
+     "Aix en Provence", "Le Mans", "Clermont Ferrand", "Tours", "Amiens", "Limoges", "Annecy", "Perpignan", "Rouen", "London", "New York", "Caen", "Beauvais",
+     "Pantin", "Laval", "Bondy", "Evry", "Calais", "Lorient", "Cergy", "Roubaix", "Vitry-sur-Seine", "Cholet"
    ]
 
   function getSearch(value){

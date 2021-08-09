@@ -35,6 +35,9 @@
 #rain{
     background-image: url("../../images/LightRain.png");
 }
+#heavy-rain{
+    background-image: url("../../images/HeavyRain.png");
+}
 #heavy-cloud{
     background-image: url("../../images/HeavyCloud.png");
 }
@@ -43,6 +46,12 @@
 }
 #light-storm{
     background-image: url('../../images/Thunderstorm.png');
+}
+#light-snow{
+    background-image: url('../../images/Snow.png');
+}
+#heavy-snow{
+    background-image: url('../../images/Hail.png');
 }
 @keyframes mooveBackground {
     from {
