@@ -22,7 +22,6 @@
     display: flex;
     margin: 1rem;
     padding: 0;
-    width: 100vw;
     list-style: none;
     overflow-x: scroll;
     scroll-snap-type: x proximity;
